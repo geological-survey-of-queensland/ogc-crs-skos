@@ -65,11 +65,11 @@ def convert_variables_to_graph(epsg_uri, vars):
     ))
 
     g.bind('reg', 'http://purl.org/linked-data/registry#')
-    g.bind('status', 'http://linked.data.gov.au/def/reg-status/')
+    g.bind('status', 'https://linked.data.gov.au/def/reg-status/')
     g.add((
         this_concept_uri,
         URIRef('http://purl.org/linked-data/registry#status'),
-        URIRef('http://linked.data.gov.au/def/reg-status/{}'.format(vars['status'])),
+        URIRef('https://linked.data.gov.au/def/reg-status/{}'.format(vars['status'])),
     ))
 
     g.add((
